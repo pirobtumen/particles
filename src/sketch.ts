@@ -82,6 +82,10 @@ function distance(x1: number, y1: number, x2: number, y2: number) {
 
 const sketch = (p5: P5) => {
   p5.setup = () => {
+    if (window.innerWidth < config.width) {
+      config.width = window.innerWidth;
+    }
+
     const canvas = p5.createCanvas(config.width, config.height);
     canvas.parent("p5");
     p5.frameRate(60);

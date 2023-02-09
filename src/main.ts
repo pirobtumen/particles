@@ -10,18 +10,24 @@ import {
 } from "./sketch";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-  <div>
+  <div class="main">
     <h1>Particles</h1>
-    <div id="p5"></div>
-    <div>
-      <p>Particles</p>
-      <input type="range" min="1" max="200" value="${getParticles()}" class="slider" id="particles">
-      <p>Link radius</p>
-      <input type="range" min="1" max="200" value="${getRadius()}" class="slider" id="radius">
-      <p>Speed</p>
-      <input type="range" min="1" max="10" value="${
-        11 - getSpeedFactor()
-      }" class="slider" id="speed">
+    <p>Use the controls to change the pattern.</p>
+    <div class="wrapper">
+      <div id="p5"></div>
+      <div class="controls">
+        <p>Particles</p>
+        <input type="range" min="1" max="200" value="${getParticles()}" class="slider" id="particles">
+        <p>Link radius</p>
+        <input type="range" min="1" max="200" value="${getRadius()}" class="slider" id="radius">
+        <p>Speed</p>
+        <input type="range" min="1" max="10" value="${
+          11 - getSpeedFactor()
+        }" class="slider" id="speed">
+      </div>
+    </div>
+    <div class="footer">
+      <a href="https://www.pirobits.com">© 2023 by pirobits.com</a>
     </div>
   </div>
 `;
