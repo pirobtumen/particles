@@ -19,8 +19,8 @@ type Config = {
 let particles: Particle[] = [];
 const config: Config = {
   particles: 100,
-  width: 800,
-  height: 800,
+  width: 600,
+  height: 600,
   linkRadius: 100,
   speedFactor: 10,
 };

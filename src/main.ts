@@ -29,23 +29,21 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 const particlesSlider = document.getElementById("particles");
 if (particlesSlider) {
   particlesSlider.oninput = (e) => {
-    setParticles(e.target!.value);
+    setParticles(parseInt((e.target as HTMLInputElement).value));
   };
 }
 
 const radiusSlider = document.getElementById("radius");
 if (radiusSlider) {
   radiusSlider.oninput = (e) => {
-    // output.innerHTML = this.value;
-    setRadius(e.target!.value);
+    setRadius(parseInt((e.target as HTMLInputElement).value));
   };
 }
 
 const speedSlider = document.getElementById("speed");
 if (speedSlider) {
   speedSlider.oninput = (e) => {
-    // output.innerHTML = this.value;
-    setSpeedFactor(11 - e.target!.value);
+    setSpeedFactor(11 - parseInt((e.target as HTMLInputElement).value));
   };
 }
 
